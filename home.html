@@ -17,18 +17,18 @@
               <div class="artboard artboard-demo phone-3">
                 <div class="stats shadow">
                     <div class="stat">
-                      <div class="stat-value">10000</div>
+                      <div class="stat-value" id="balanceAmmount">10000</div>
                       <div class="stat-desc">Available Balance</div>
                     </div>
                    
                   </div>
                   <div class="divider"></div>
                <div class="inline-block">
-                <button class="btn btn-lg">Add Money</button>
-                <button class="btn btn-lg">Cash Out</button>
+                <button id="add-money-btn" class="btn btn-lg bg-green-500">Add Money</button>
+                <button id="cash-out-btn" class="btn btn-lg bg-red-400">Cash Out</button>
                 <div class="divider"></div>
                 <!-- add money from -->
-                <div class="">
+                <div class="" id="add-money-from">
                   <div class="hero-content flex-col lg:flex-row-reverse">
                     <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                       <form class="card-body">
@@ -45,7 +45,31 @@
                           <input type="password" placeholder="pin" class="input input-bordered" id="add-pin-input" required />
                         </div>
                         <div class="form-control mt-6">
-                          <button class="btn btn-primary" id="btn-add">Add Money</button>
+                          <button class="btn btn-primary bg-green-500" id="btn-add">Add Money</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- cash out from -->
+                <div class="hidden" id="cash-out-from">
+                  <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                      <form class="card-body">
+                        <div class="form-control">
+                          <label class="label">
+                            <span class="label-text">Amount</span>
+                          </label>
+                          <input type="number" placeholder="Cash Out Amount" class="input input-bordered" id="cash-money-input" required />
+                        </div>
+                        <div class="form-control">
+                          <label class="label">
+                            <span class="label-text">Pin</span>
+                          </label>
+                          <input type="password" placeholder="pin" class="input input-bordered" id="cash-pin-input" required />
+                        </div>
+                        <div class="form-control mt-6">
+                          <button class="btn btn-primary bg-red-400" id="btn-cash">Cash Out</button>
                         </div>
                       </form>
                     </div>
@@ -58,7 +82,10 @@
             </div>
             
           </div>
+          <!-- link script file -->
           <script src="/java-script/home.js"></script>
+          <script src="/java-script/cash.js"></script>
+          <script src="/java-script/btn.js"></script>
      </main>
 </body>
 </html>
